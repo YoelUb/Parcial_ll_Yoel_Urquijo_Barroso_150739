@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Regístrate para ver las películas"
+        android:text="Regístrate o Inicia Sesión"
         android:textSize="16sp"
         android:layout_marginBottom="32dp"
         android:alpha="0.7"/>
@@ -54,8 +54,16 @@
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Registrar"
+        android:text="Registrar Usuario"
         android:layout_marginTop="24dp"
         android:backgroundTint="?attr/colorPrimary"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Sesión"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
 
 </LinearLayout>

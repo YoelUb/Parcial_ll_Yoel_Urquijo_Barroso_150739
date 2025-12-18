@@ -23,6 +23,25 @@
           "other_platform_oauth_client": []
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074260020056:android:9f08e2d58b1b8c5d1bf32d",
+        "android_client_info": {
+          "package_name": "com.example.parcial_ll_yoel_urquijo_barroso_150739"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMjorhZIe0sJLIeGBCIi5yjRe1R6EcWdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
     }
   ],
   "configuration_version": "1"

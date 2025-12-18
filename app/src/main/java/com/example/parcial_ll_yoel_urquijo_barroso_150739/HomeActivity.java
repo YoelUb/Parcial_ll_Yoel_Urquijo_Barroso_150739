@@ -6,18 +6,19 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.parcial_ll_yoel_urquijo_barroso_150739.db.AppDatabase;
 import com.example.parcial_ll_yoel_urquijo_barroso_150739.db.Peliculas;
+
+import com.example.parcial_ll_yoel_urquijo_barroso_150739.db.PeliculasAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import java.util.List;
-import com.example.parcial_ll_yoel_urquijo_barroso_150739.db.Peliculas.*;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -42,7 +43,9 @@ public class HomeActivity extends AppCompatActivity {
         List<Peliculas> lista = db.peliculasDao().getAll();
 
         recyclerView = findViewById(R.id.recyclerView);
+
         adapter = new PeliculasAdapter(lista, this, isGridMode);
+
         recyclerView.setAdapter(adapter);
         updateLayoutManager();
     }

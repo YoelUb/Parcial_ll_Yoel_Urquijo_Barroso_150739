@@ -1,19 +1,6 @@
 package com.example.parcial_ll_yoel_urquijo_barroso_150739.db;
 
 import android.content.Context;
-
-import androidx.annotation.NonNull;
-import androidx.room.Database;
-import androidx.room.Room;
-import androidx.room.RoomDatabase;
-import androidx.sqlite.db.SupportSQLiteDatabase;
-
-import java.util.concurrent.Executors;
-
-
-public class AppBaseDatos{
-
-import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
@@ -53,5 +40,4 @@ public abstract class AppDatabase extends RoomDatabase {
         }
         return INSTANCE;
     }
-}
 }

@@ -1,4 +1,4 @@
-package com.example.parcial_ll_yoel_urquijo_barroso_150739;
+package com.example.parcial_ll_yoel_urquijo_barroso_150739.db;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,7 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
-import com.example.parcial_ll_yoel_urquijo_barroso_150739.db.Peliculas;
+import com.example.parcial_ll_yoel_urquijo_barroso_150739.DetailActivity;
+import com.example.parcial_ll_yoel_urquijo_barroso_150739.R;
+
 import java.util.List;
 
 public class PeliculasAdapter extends RecyclerView.Adapter<PeliculasAdapter.PeliculaViewHolder> {

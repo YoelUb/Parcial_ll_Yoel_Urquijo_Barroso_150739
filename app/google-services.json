@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1074260020056",
+    "project_id": "sistemamedicoapp",
+    "storage_bucket": "sistemamedicoapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074260020056:android:f407f2d1ba80beda1bf32d",
+        "android_client_info": {
+          "package_name": "com.example.a150735_yoel_urquijo_barroso"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMjorhZIe0sJLIeGBCIi5yjRe1R6EcWdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

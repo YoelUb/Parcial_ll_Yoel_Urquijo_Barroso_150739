@@ -13,6 +13,11 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle("Detalle de Película");
+        }
+
         Peliculas pelicula = (Peliculas) getIntent().getSerializableExtra("pelicula_data");
 
         ImageView img = findViewById(R.id.imgDetail);
@@ -22,11 +27,13 @@ public class DetailActivity extends AppCompatActivity {
         if (pelicula != null) {
             titulo.setText(pelicula.titulo);
             descripcion.setText(pelicula.descripcion);
-
-            Glide.with(this)
-                    .load(pelicula.imagenUrl)
-                    .placeholder(R.mipmap.ic_launcher)
-                    .into(img);
+            Glide.with(this).load(pelicula.imagenUrl).placeholder(R.mipmap.ic_launcher).into(img);
         }
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 }

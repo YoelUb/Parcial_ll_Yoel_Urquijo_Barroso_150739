@@ -26,9 +26,21 @@ public abstract class AppDatabase extends RoomDatabase {
                                     super.onCreate(db);
                                     Executors.newSingleThreadExecutor().execute(() -> {
                                         getInstance(context).peliculasDao().insertAll(
-                                                new Peliculas("Avatar", "Ciencia ficción en Pandora", "https://via.placeholder.com/150"),
-                                                new Peliculas("Titanic", "Romance en alta mar", "https://via.placeholder.com/150"),
-                                                new Peliculas("Inception", "Sueños dentro de sueños", "https://via.placeholder.com/150")
+                                                new Peliculas(
+                                                        "El Caballero Oscuro",
+                                                        "Director: Christopher Nolan",
+                                                        "https://almacen-rmr.tionazo.com/pelis/caballero-oscuro.jpg"
+                                                ),
+                                                new Peliculas(
+                                                        "Cadena Perpetua",
+                                                        "Director: Frank Darabont",
+                                                        "https://almacen-rmr.tionazo.com/pelis/cadena-perpetua.jpg"
+                                                ),
+                                                new Peliculas(
+                                                        "City Lights",
+                                                        "Director: Charlie Chaplin",
+                                                        "https://almacen-rmr.tionazo.com/pelis/city_lights.jpg"
+                                                )
                                         );
                                     });
                                 }

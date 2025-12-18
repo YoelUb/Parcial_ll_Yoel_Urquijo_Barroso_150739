@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Configuración de Visualización"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elige cómo ver el listado de películas:"
+        android:layout_marginBottom="12dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupViews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"> <RadioButton
+        android:id="@+id/rbLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vista Lista (Imagen y Título)"
+        android:padding="8dp"/>
+
+        <RadioButton
+            android:id="@+id/rbGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vista Cuadrícula (Solo Imágenes)"
+            android:padding="8dp"/>
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalle de Película:"
+        android:layout_marginBottom="12dp"/>
+
+    <Switch
+        android:id="@+id/switchActors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mostrar Actores en el detalle"
+        android:textSize="16sp"
+        android:minHeight="48dp"/>
+
+</LinearLayout>

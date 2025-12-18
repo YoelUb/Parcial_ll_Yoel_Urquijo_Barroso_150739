@@ -12,9 +12,12 @@ public class Peliculas implements Serializable {
     public String descripcion;
     public String imagenUrl;
 
-    public Peliculas(String titulo, String descripcion, String imagenUrl) {
+    public String actores;
+
+    public Peliculas(String titulo, String descripcion, String imagenUrl, String actores) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.imagenUrl = imagenUrl;
+        this.actores = actores;
     }
 }

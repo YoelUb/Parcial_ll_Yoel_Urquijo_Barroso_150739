@@ -12,10 +12,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.parcial_ll_yoel_urquijo_barroso_150739.db.AppDatabase;
 import com.example.parcial_ll_yoel_urquijo_barroso_150739.db.Peliculas;
-
 import com.example.parcial_ll_yoel_urquijo_barroso_150739.db.PeliculasAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import java.util.List;
@@ -43,11 +41,21 @@ public class HomeActivity extends AppCompatActivity {
         List<Peliculas> lista = db.peliculasDao().getAll();
 
         recyclerView = findViewById(R.id.recyclerView);
-
         adapter = new PeliculasAdapter(lista, this, isGridMode);
-
         recyclerView.setAdapter(adapter);
+
         updateLayoutManager();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        boolean savedMode = prefs.getBoolean("is_grid", false);
+        if (isGridMode != savedMode) {
+            isGridMode = savedMode;
+            adapter.setGrid(isGridMode);
+            updateLayoutManager();
+        }
     }
 
     private void updateLayoutManager() {
@@ -56,7 +64,6 @@ public class HomeActivity extends AppCompatActivity {
         } else {
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
         }
-        adapter.setGrid(isGridMode);
     }
 
     @Override
@@ -70,9 +77,7 @@ public class HomeActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_settings) {
-            isGridMode = !isGridMode;
-            prefs.edit().putBoolean("is_grid", isGridMode).apply();
-            updateLayoutManager();
+            startActivity(new Intent(this, SettingsActivity.class));
             return true;
         } else if (id == R.id.action_logout) {
             FirebaseAuth.getInstance().signOut();

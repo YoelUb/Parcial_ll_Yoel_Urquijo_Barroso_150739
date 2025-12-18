@@ -22,6 +22,15 @@
         android:inputType="textPassword"
         android:layout_marginTop="16dp"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="* Mín. 8 caracteres, incluir Mayús, Minús y Números."
+        android:textSize="12sp"
+        android:textColor="#D32F2F"
+        android:layout_marginTop="4dp"
+        android:paddingStart="4dp"/>
+
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
